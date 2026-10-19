@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+}
+/* выравниваем все пункты шапки по одной линии */
+.navbar-nav {
+    align-items: center;
+}
+.container {
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
+.navbar .nav-link {
+    display: flex;
+    align-items: center;
+    line-height: 1;          /* убирает лишнюю высоту строки */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* аватарка по центру строки, не растягивает пункт */
+.navbar .nav-link img {
+    display: block;
+    height: 50px;            /* фиксированная высота вместо 4vw */
+    width: auto;
+}
+.avatar-header {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+/* бургер-кнопка — делаем заметной */
+.navbar-toggler {
+    border: 2px solid #355f77;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 6px 10px;
+}
+.footer, header {
+    background-color: #f6e3a4;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23355f77' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+@keyframes blink-scale {
+    0%,100% {transform: scale(1)}
+    50% {transform: scale(1.05)}
+}
+.blink {
+    animation: blink-scale 3s ease-in-out infinite;
+    transform-origin: center;
+    display: inline-block;
+}
+
+@font-face {
+    font-family: 'fonts-bold';
+    src: url("/fonts/bold.otf");
+}
+
+@font-face {
+    font-family: 'text';
+    src: url("/fonts/text.ttf");
+}
+@font-face {
+    font-family: 'regular';
+    src: url("/fonts/Regular.ttf");
+}
+
+.text-bold {
+    font-family: 'fonts-bold';
+    color: #355f77!important;
+    font-size: 22px;
+}
+.text-white {
+    font-family: 'regular';
+    color: #6b4e00!important;
+    font-size: 28px;
+}
+.text {
+    font-family: text;
+    font-size: 25px;
+    text-align: justify;
+}
+ /* главная */
+.banner {
+    background-color: #e7c158;
+    width: 100vw;
+    height: 30vh;
+}
+
+ .banner {
+     background-color: #e7c158;
+     width: 100%;
+     min-height: 400px;
+ }
+.banner_photo {
+    width: auto;
+    height: 35vw;
+}
+.photo {
+    display: flex;
+}
+
+.logo-header {
+    width: 8vw;
+    height: auto;
+}
+
+.quiz-btn {
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .2s;
+    display: inline-block;
+}
+.quiz-btn:hover, a:hover { transform: scale(1.07); }
+.alert {
+    margin: 0!important;
+}
+/* википедия */
+.facts {
+    width: 450px;
+    height: auto;
+    border-radius: 20px;
+    border: #f6e3a4 solid 3px;
+}
+.row {
+--bs-gutter-x: 0!important;
+}
+
+a {
+    text-decoration: none!important;
+
+}
+
+.img-facts {
+width: 150px;
+height: auto;
+}
+#vicpedia {
+    margin-bottom: 20px;
+}
+/* ===== футер ===== */
+.footer {
+    background: #f6e3a4;
+    border-top: 3px solid #e7c158;
+}
+
+.footer-text {
+    font-family: 'regular', sans-serif;
+    color: #6b4e00;
+    max-width: 320px;
+    margin-top: 10px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li { margin-bottom: 8px; }
+
+.footer-list a {
+    font-family: 'text', sans-serif;
+    color: #355f77;
+    text-decoration: none;
+    transition: color .2s;
+    font-size: 18px;
+}
+
+.footer-list a:hover {
+    color: #6b4e00;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background: #e7c158;
+    padding: 12px 0;
+    color: #4a3a00;
+}
+
+/* футер прижат к низу на коротких страницах */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; }
+
+/* телефон: колонки в столбик, текст по центру */
+@media (max-width: 768px) {
+    .footer { text-align: center; }
+    .footer-text { margin: 10px auto 0; }
+}
+/* тест */
+.questions-block {
+    padding: 10px;
+    border: #e7c158 solid 3px;
+    color: #e7c158;
+    border-radius: 20px;
+    margin: 0 20px 20px 20px;
+    background-color: #f6e3a4;
+}
+
+.test-button {
+    padding: 10px;
+    border: #e7c158 solid 3px;
+    color: #e7c158;
+    background-color: #f6e3a4;
+    border-radius: 20px;
+    width: 98%;
+    margin: 0 20px 20px 20px;
+}
+#test {
+    padding-top: 15px;
+    background-color: #e7c158;
+
+}
+.test-button:hover {
+    transform: scale(1.01);
+}
+/* вариант ответа с иконкой-миньоном */
+.answer-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 12px;
+    transition: background .2s;
+    font-family: 'text', sans-serif;
+    font-size: 18px;
+}
+
+.answer-option:hover {
+    background: #fff8e1;
+}
+
+/* прячем настоящую радиокнопку — она продолжает работать */
+.answer-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+}
+
+.icon-on {
+    display: none;
+}
+
+.answer-option input:checked ~ .icon-on {
+    display: block;
+}
+
+.answer-option input:checked ~ .icon-off {
+    display: none;
+}
+
+.answer-option input:checked ~ span {
+    color: #355f77;
+    font-weight: bold;
+}
+/* читабельность теста */
+.questions-block label,
+.questions-block label span,
+.answer-option,
+.answer-option span {
+    color: #6b4e00 !important;      /* тёмно-медовый вместо бледно-жёлтого */
+    font-size: 19px;
+}
+
+/* выбранный ответ выделяем синим */
+.answer-option input:checked ~ span {
+    color: #355f77 !important;
+    font-weight: bold;
+}
+
+/* блоки вопросов делаем чуть светлее, чтобы текст выделялся */
+.questions-block {
+    background: #f9e9b8;
+}
+
+/* при наведении вариант подсвечивается */
+.answer-option:hover {
+    background: #fff8e1;
+}
+
+.movies {
+    background-color: #f6e3a4;
+}
+
+.movies, .movies-despicable {
+    border-radius: 15px;
+}
+/*.movies-despicable {*/
+/*    background-color: #e7c158;*/
+/*}*/
+.despicable-img {
+    border: #e7c158 solid 3px;
+}
+/* ===== АДАПТИВ ===== */
+
+body {
+    overflow-x: hidden; /* убирает горизонтальную прокрутку */
+}
+
+.facts {
+    max-width: 90%; /* картинка никогда не вылезет из колонки */
+}
+
+.img-facts {
+    vertical-align: middle; /* логотип в заголовке по центру строки */
+}
+/* результат */
+
+#result-block {
+    max-width: 800px;
+    height: auto;
+    border: #6b4e00 solid 2px;
+}
+.result-photo {
+    max-width: 100%;
+    height: auto;
+    max-height: 420px;
+    display: block;
+    margin: 10px auto;
+}
+#result-block {
+    max-width: 800px;
+    padding: 30px 40px;          /* воздух внутри карточки */
+    margin-bottom: 20px !important; /* отступ от футера */
+    border: #6b4e00 solid 2px;
+    background: #f9e9b8;
+}
+.result-text {
+    font-family: 'text', sans-serif;
+    font-size: 20px;
+    color: #6b4e00;
+    text-align: justify;
+}
+#result-teg {
+    max-width: 300px;
+    color: #355f77;
+    border-radius: 15px;
+    padding: 7px;
+}
+.body-result, .register-login {
+    background-color: #e7c158;
+}
+
+#banner_2 {
+    background-image: url("/images/banner_2.webp");
+}
+
+/* register */
+.form {
+    background-color: #f9e9b8;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 650px !important;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.form-input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    color: #6b4e00;
+    box-sizing: border-box;
+}
+
+
+
+.form-button {
+    width: 100%;
+    padding: 13px 20px;
+    background-color: #e7c158;
+    color: #6b4e00;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+.form-button:hover {
+    background-color: #6b4e00;
+    color: #e7c158;
+}
+
+
+.label-form {
+    font-size: 22px;
+    margin-bottom: 0.2rem!important;
+}
+.form a {
+  color: black!important;
+  display: inline-block;
+  transition: transform .2s;
+}
+.form a:hover {
+    transform: scale(1.04)!important;
+}
+.form-input:focus {
+    border-color: #e7c158;
+    box-shadow: 0 0 0 3px rgba(128, 146, 112, 0.15);
+}
+/* minion*/
+.card-minion {
+    border-radius: 15px;
+    padding: 10px;
+    border: #e7c158 solid 3px;
+    width: 300px;
+    height: 390px;
+    position: relative;
+}
+.card-minion:hover { transform: scale(1.07); }
+.minion-img {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;   /* сохраняет пропорции, миньон не плющится */
+}
+.text-card {
+    position: absolute;
+    bottom: 3px;
+    text-align: center;
+}
+
+
+/* планшеты */
+@media (max-width: 992px) {
+    .facts {
+        width: 90%;
+    }
+}
+
+/* телефоны */
+@media (max-width: 768px) {
+    .text-white {
+        font-size: 22px;
+    }
+    .cabinet-text {
+        font-size: 28px;
+        text-align: center;
+    }
+
+
+    .quiz-btn {
+        font-size: 24px;
+    }
+
+    .banner_photo {
+        height: auto;
+        width: 70%;
+        max-width: 280px;
+    }
+
+    .photo {
+        justify-content: center;
+        padding-bottom: 24px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .img-facts {
+        width: 80px;
+    }
+
+    .facts {
+        width: 95%;
+    }
+    .logo-header {
+        width: 20vw;
+        height: auto;
+    }
+}
+
